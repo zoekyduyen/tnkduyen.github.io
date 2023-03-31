@@ -1,0 +1,316 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><style>@charset "UTF-8";
+/* Workaround for 'break-before:avoid' */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%; }
+
+ul, li {
+  margin: 0;
+  padding: 0; }
+
+span {
+  display: block; }
+
+p {
+  margin: 0; }
+
+@page {
+  size: A4;
+  margin: 10mm 0 10mm 0; }
+
+@page :first {
+  margin-top: 10mm; }
+
+a {
+  color: #222222;
+  font-weight: inherit;
+  text-decoration: none; }
+  a[href] {
+    text-decoration: underline;
+    text-decoration-color: #555555; }
+
+p {
+  line-height: 1.2; }
+
+li {
+  line-height: 1.3; }
+  li:first-child {
+    margin-top: 0; }
+
+.content {
+  width: 1000px;
+  height: auto;
+  /* padding: 0 50px; */
+  /* margin: 0 auto; */
+  margin: 20px auto;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #222222; }
+
+.table {
+  width: 100%;
+  display: table;
+  padding: 5px 0; }
+  .table .main {
+    display: table-cell;
+    width: 100%;
+    /* width: 70%; */
+    /* padding-right: 50px; */
+  }
+    .table .main .highlights {
+      width: auto;
+      display: block;
+      padding: 0 10px;
+      margin-top: 12.30769px;
+      margin-bottom: 0;
+      text-align: justify;
+      column-gap: 10px; }
+      .table .main .highlights li {
+        font-size: 16px;
+        list-style: none;
+        line-height: 1.2; }
+        .table .main .highlights li:before {
+          content: "· ";
+          vertical-align: middle; }
+  .table .side {
+    display: table-cell;
+    width: 15%;
+    padding-left: 50px;
+    text-align: right; }
+    .table .side p {
+      line-height: 1.3; }
+
+.section-title {
+  font-size: 26px;
+  font-weight: normal;
+  margin: 0 0 5px 0; }
+
+.margin-container-2:not(:first-child) {
+  margin-top: 20px; }
+
+.margin-container-3:not(:first-child) {
+  margin-top: 10px; }
+
+.margin-container-4:not(:first-child) {
+  margin-top: 50px; }
+
+.margin-text-1 {
+  margin-top: 0.25em; }
+  .margin-text-1:empty {
+    display: none; }
+
+.margin-text-2 {
+  margin-top: 0.5em; }
+  .margin-text-2:empty {
+    display: none; }
+
+.margin-text-3 {
+  margin-top: 1em; }
+  .margin-text-3:empty {
+    display: none; }
+
+.no-break {
+  break-inside: avoid; }
+
+.no-alone-1 {
+  break-inside: avoid; }
+  .no-alone-1::after {
+    content: "";
+    display: block;
+    height: 75px;
+    margin-bottom: -75px; }
+
+.no-alone-2 {
+  break-inside: avoid; }
+  .no-alone-2::after {
+    content: "";
+    display: block;
+    height: 150px;
+    margin-bottom: -150px; }
+
+.markdown h1 {
+  font-size: 160%;
+  font-weight: bolder; }
+
+.markdown h2 {
+  font-size: 150%;
+  font-weight: bolder; }
+
+.markdown h3 {
+  font-size: 140%;
+  font-weight: bolder; }
+
+.markdown h4 {
+  font-size: 130%;
+  font-weight: bold; }
+
+.markdown h5 {
+  font-size: 120%;
+  font-weight: bold; }
+
+.markdown h6 {
+  font-size: 110%;
+  font-weight: bold; }
+
+.markdown ul, .markdown ol {
+  margin-left: 20px; }
+
+.markdown img {
+  display: block;
+  margin: 20px auto;
+  max-width: 1000px;
+  text-align: center; }
+
+.markdown blockquote {
+  margin: 20px 0;
+  padding: 15px 20px; }
+  .markdown blockquote p {
+    display: inline; }
+
+.markdown code {
+  font-family: monospace; }
+
+.basics .main {
+  vertical-align: middle; }
+  .basics .main .name {
+    font-size: 50px;
+    line-height: 1em;
+    font-weight: bold;
+    display: block;
+    margin-left: -3.5px; }
+  .basics .main .label {
+    font-size: 30px;
+    line-height: 1em;
+    font-weight: lighter;
+    display: block;
+    margin-left: -1.2px; }
+
+.basics .side {
+  vertical-align: middle;
+  padding-left: 0;
+  padding-top: 15px; }
+  .basics .side .contact {
+    font-size: 14px;
+    list-style-type: none; }
+    .basics .side .contact li {
+      line-height: 1.5em; }
+
+.basics .summary {
+  font-size: 16px;
+  padding: 20px 0;
+  text-align: justify; }
+
+.work .header .table {
+  padding: 0; }
+  .work .header .table .left {
+    display: table-cell; }
+    .work .header .table .left .position {
+      font-size: 18px;
+      font-weight: bold;
+      display: block; }
+    .work .header .table .left .company-location {
+      font-size: 17px;
+      font-weight: lighter;
+      display: block; }
+      .work .header .table .left .company-location a {
+        text-decoration-color: #888888; }
+  .work .header .table .right {
+    text-align: right;
+    display: table-cell; }
+    .work .header .table .right .dates {
+      font-size: 15px;
+      font-weight: lighter; }
+
+.work .summary {
+  font-size: 16px;
+  padding: 0;
+  margin-top: 12.30769px; }
+  .work .summary:empty {
+    display: none; }
+
+.projects .header .name {
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block; }
+  .projects .header .name a {
+    text-decoration-color: #222222; }
+
+.projects .header .roles {
+  font-size: 16px;
+  line-height: 18px;
+  display: inline-block; }
+
+.projects .description {
+  font-size: 16px;
+  padding: 0;
+  margin-top: 12.30769px;
+  text-align: justify; }
+  .projects .description:empty {
+    display: none; }
+
+.skills .section-title {
+  margin: 0; }
+
+.skills .container {
+  display: block;
+  columns: 2;
+  column-gap: 10px; }
+  .skills .container .article {
+    break-inside: avoid-column;
+    width: 120px;
+    padding-top: 20px; }
+    .skills .container .article span {
+      display: block;
+      font-size: 18px;
+      font-weight: lighter; }
+    .skills .container .article li {
+      font-size: 16px;
+      list-style: none;
+      line-height: 1.3; }
+
+.education .title {
+  font-size: 16px; }
+
+.education .institution {
+  font-size: 16px;
+  font-weight: lighter; }
+  .education .institution a {
+    text-decoration-color: #888888; }
+
+.certificates .name {
+  font-size: 16px; }
+
+.certificates .issuer {
+  font-size: 16px;
+  font-weight: lighter;
+  margin-top: 0.35em; }
+
+.awards .header .title {
+  font-size: 16px;
+  display: inline-block; }
+
+.awards .header .awarder {
+  font-size: 15px;
+  font-weight: lighter;
+  line-height: 16px;
+  display: inline-block; }
+
+.awards .summary {
+  font-size: 14px; }
+
+.languages ul {
+  list-style: none; }
+  .languages ul li {
+    font-size: 14px; }
+
+.interests ul {
+  list-style: none; }
+  .interests ul li {
+    font-size: 16px; }
+
+.links ul {
+  list-style: none; }
+  .links ul li {
+    font-size: 14px; }
+</style><title>Tran Nguyen Ky Duyen</title></head><body><div class="content"><div class="basics"><div class="table"><div class="main"><span class="name">Tran Nguyen Ky Duyen</span><span class="label"></span><div style="margin-bottom: 20px; margin-top: 20px;"><div style="text-align: left;"><span style="width:33%; display: inline-block">Ho Chi Minh City, Vietnam</span><span style="width:33%; display: inline-block"><a href="tel:(+84) 888 305 998"><strong>(+84) 888 305 998</strong></a></span></div><div style="text-align: left; margin-top: 10px;"><span style="width:33%; display: inline-block;"><a href="mailto:zoekyduyen@gmail.com"><strong>zoekyduyen@gmail.com</strong></a></span><span style="width:33%; display: inline-block;"><a href="https://www.linkedin.com/in/tnkduyen/"><strong>linkedin.com</strong>/in/tnkduyen</a></span></div></div></div></div></div><div class="table"><div class="main"><div class="work margin-container-4"><p class="section-title no-alone-2">Education</p><div class="container"><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="position">Bachelor of Media Production and Management</span><span class="company-location margin-text-1"><a href="https://www.hoasen.edu.vn/en/">Hoa Sen University</a> · HCMC, Vietnam</span></div><div class="right"><span class="dates">2019 - expected 2023</span></div></div></div><div class="summary markdown"></div><ul class="highlights no-break"><li>Relevant coursework: Audio and Video Techniques, TVC Production, Copywriting, IMC, Media Project and Management, Media Strategy, and Tactics</li></ul></div></div></div><div class="work margin-container-4"><p class="section-title no-alone-2">Experience</p><div class="container"><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="position">Content Writer</span><span class="company-location margin-text-1"><a href="https://bcmsolutions.com.vn/">BCM Solutions Agency</a> · HCMC, Vietnam</span></div><div class="right"><span class="dates">Oct 2022 - Present</span></div></div></div><div class="summary markdown"></div><ul class="highlights no-break"><li>Composed engaging and informative social media posts, PR posts and SEO content for prominent brands such as VietJet Airline, Hanoi BOLD &amp; Light, Toshiba Lifestyle, Ricola, ATOME, Habeco, Khánh Hòa Nutrifood, and Sacombank.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="position">Producer Assitant</span><span class="company-location margin-text-1"><a href="https://www.facebook.com/PHUM.Studio">PHUM Studio</a> · HCMC, Vietnam</span></div><div class="right"><span class="dates">Jan 2022 - Present</span></div></div></div><div class="summary markdown"></div><ul class="highlights no-break"><li>Developed shooting concepts and assisted the production team in the shoot for PHYSIOGEL, TOPSMARKET, Pierre Cardin, ICONDENIM.</li></ul></div></div></div><div class="work margin-container-4"><p class="section-title no-alone-2">Writing Projects</p><div class="container"><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="position">Social Media Executive</span><span class="company-location margin-text-1"><a>KAMALA Beauty Spa and Clinic</a></span></div><div class="right"><span class="dates">May 2022 - Sep 2022</span></div></div></div><div class="summary markdown"></div><ul class="highlights no-break"><li>Publicized 25 social posts and co-designed 5 posts, which led to 1,543 Facebook reach and 522 likes.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="position">Content Writer &amp; Co-designer</span><span class="company-location margin-text-1"><a>Tá Lã House</a></span></div><div class="right"><span class="dates">May 2022 - Sep 2022</span></div></div></div><div class="summary markdown"></div><ul class="highlights no-break"><li>Wrote 10 social posts and assisted co-writers in generating content. Designed 7+ posts and co-designed 5 posts. Resulted in 344 Facebook reach, 159 likes, and 163 followers.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="position">Content Writer</span><span class="company-location margin-text-1"><a>TVCreate 2022</a></span></div><div class="right"><span class="dates">Jan 2022 - Jul 2022</span></div></div></div><div class="summary markdown"></div><ul class="highlights no-break"><li>Conceptualized topics and delivered 30 social posts, which increased audience interactions by 15% compared to previous years.</li></ul></div></div></div><div class="work margin-container-4"><p class="section-title no-alone-2">Filming Projects</p><div class="container"><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="position">Director</span><span class="company-location margin-text-1"><a href="https://www.youtube.com/watch?v=jNW1qHJCRWo">Music Video Như Là Mer</a></span></div><div class="right"><span class="dates">Sep 2022 - Nov 2022</span></div></div></div><div class="summary markdown"></div><ul class="highlights no-break"><li>Conceptualized Director's Treatment and directed the production team throughout the shoot. Reached 22K views on Youtube.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="position">Director</span><span class="company-location margin-text-1"><a href="https://drive.google.com/file/d/1eK2M79Ax3RnEoJzCQrwFaADNOWrK_suF/view">PSA Vui không khó dễ, đời mới nể</a></span></div><div class="right"><span class="dates">Apr 2022 - Jul 2022</span></div></div></div><div class="summary markdown"></div><ul class="highlights no-break"><li>Conceived and directed the plot. Resulted in Nomination for Best TVC/PSA at 2022 Hoa Sen EOS.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="position">Director</span><span class="company-location margin-text-1"><a href="https://www.youtube.com/channel/UCeAUs42mDvw6YUfTPr5TJCA">Podcast series Người trong ngành bàn về dằm trong nghề</a></span></div><div class="right"><span class="dates">Sep 2021 - Apr 2022</span></div></div></div><div class="summary markdown"></div><ul class="highlights no-break"><li>Generated script guidelines and directed the production process. Reached 1,373 total views on Youtube.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="position">Script Supervisor</span><span class="company-location margin-text-1"><a href="https://drive.google.com/file/d/1ELUwbzQseEnRmLxSGVR4UIlccr5BPUpW/view?usp=share_link">Short film Đường về</a></span></div><div class="right"><span class="dates">Dec 2021 - Mar 2022</span></div></div></div><div class="summary markdown"></div><ul class="highlights no-break"><li>Monitored the continuity of the shoot, kept every details of written and photographic records of each scene. Won Best Film at 2022 Hoa Sen EOS.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="position">Creative Supervisor</span><span class="company-location margin-text-1"><a href="https://drive.google.com/file/d/1Y1ip7W8-IcBZqOBkTbPv_mEnna5sSoB7/view">Performing Art MV All of me</a></span></div><div class="right"><span class="dates">Dec 2021 - Feb 2022</span></div></div></div><div class="summary markdown"></div><ul class="highlights no-break"><li>Assisted the director in conceptualizing script and script guidelines. Got nominated for Best MV at 2022 Hoa Sen EOS.</li></ul></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="position">Screenwriter</span><span class="company-location margin-text-1"><a href="https://drive.google.com/file/d/1J2dUNbTysmKarBW0-IYM96lY9dmpcjJq/view">Short film Cù Ngơ</a></span></div><div class="right"><span class="dates">Nov 2020 - Jan 2021</span></div></div></div><div class="summary markdown"></div><ul class="highlights no-break"><li>Developed storyline with the director and wrote script. Represented for Class of 2019 to be screened on 2021 Hoa Sen EOS.</li></ul></div></div></div><div class="languages margin-container-4 no-break"><p class="section-title no-alone-1">Languages</p><div class="container"><span style="width:33%; display: inline-block;">English · 8.0 IELTS</span><span style="width:33%; display: inline-block;">Vietnamese · Native</span><span style="width:33%; display: inline-block;">Deutsch · Conversational</span></div></div></div></div></div></body></html>

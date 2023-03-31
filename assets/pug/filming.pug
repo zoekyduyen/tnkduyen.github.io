@@ -1,0 +1,22 @@
+if helper.validArray(resume.filming)
+    div(class='work margin-container-4')
+        p(class='section-title no-alone-2') Filming Projects
+        div(class='container')
+            each piece in resume.filming
+                div(class='article margin-container-3')
+                    div(class='header no-alone-1')
+                        div(class='table')
+                            div(class='left')
+                                span(class='position')=piece.position
+                                span(class='company-location margin-text-1')
+                                    a(href=piece.url)=piece.name
+                                    if piece.name && piece.location
+                                        | #{' · '}
+                                    | #{piece.location}
+                            div(class='right')
+                                span(class='dates')=helper.calcDateRange(piece.startDate, piece.endDate)
+                    div(class='summary markdown')!=helper.mdToHtml(piece.summary)
+                    if helper.validArray(piece.highlights)
+                        ul(class='highlights no-break')
+                            each highlight in piece.highlights
+                                li=highlight
